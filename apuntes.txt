@@ -1,0 +1,36 @@
+Instalar Angular
+
+1. Instalar NPM (Node JS, descargarlo de la pagina)
+2. Instalar Typescript - npm install -g typescript
+3. Instalar Anglular CLI, para mejorar la velocidad de escritura de Angular - npm install -g @angular/cli
+
+Para ejecutar los comandos de Typescript debes habilitar la unrestricted run scripts en powershell ejecutar como administrador, luego ejecutar el siguiente comandos
+Set-ExecutionPolicy Unrestricted
+
+Para poner en watch el directorio entero de un proyecto...
+tsc -w
+
+Crear nuevo proyecto
+ng -new nombreApp
+Este es el paso inicial para crear algún proyecto, automáticamente configura todo, CSS, Angular etc. Este es el Angular CLI
+Para crear el servidor y correr el App
+ng serve --open
+Para crear un componente
+ng g c nombre_componente
+
+En un componente, el archivo .ts tiene un selector, en el selector se pone el nombre del componente
+Ej,
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root', ---> este es el nombre del componente
+  templateUrl: './app.component.html', --> aqui está todo el HTML del componente
+  styleUrls: ['./app.component.scss'] --> aqui todos los estilos del componente
+})
+export class AppComponent { --> esta es la clase del componente
+  title:string = 'App Diegoking';  --> aqui declaramos una variable llamada title que es de tipo String y tiene un texto, este componente tiene un atributo llamado title
+}
+
+
+
+
